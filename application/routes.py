@@ -2,8 +2,9 @@ from application import app
 from flask import render_template
 
 @app.route("/")
-@app.route("/index")
+@app.route("/index", methods=['GET', 'POST'])
 def index():
+    #form = LoginForm()
     return render_template("index.html")
 
 @app.route("/dungeon")
